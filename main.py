@@ -33,15 +33,15 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-# mysql://b467e07d5c9d97:f830326e@us-cdbr-east-04.cleardb.com/heroku_278927bf3f6ab77?reconnect=true
+# mysql://bda04f3efd4165:f1548676@us-cdbr-east-05.cleardb.net/heroku_c07db97dc3517ee?reconnect=true
 
 
 def init_connection():
     db = pymysql.connect(
-        host='us-cdbr-east-04.cleardb.com',
-        user='b4743f7fc1bf97',
-        password='13706a11',
-        database='heroku_4a2e026c40d74c7',
+        host='us-cdbr-east-05.cleardb.net',
+        user='bda04f3efd4165',
+        password='f1548676',
+        database='heroku_c07db97dc3517ee',
         cursorclass=pymysql.cursors.DictCursor
     )
 
