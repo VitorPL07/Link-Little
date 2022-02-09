@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import RedirectResponse
 
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -33,15 +33,13 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-# mysql://bda04f3efd4165:f1548676@us-cdbr-east-05.cleardb.net/heroku_c07db97dc3517ee?reconnect=true
-
 
 def init_connection():
     db = pymysql.connect(
-        host='us-cdbr-east-05.cleardb.net',
-        user='bda04f3efd4165',
-        password='f1548676',
-        database='heroku_c07db97dc3517ee',
+        host='HOST',
+        user='USERNAME',
+        password='PASSWORD',
+        database='DATABASE',
         cursorclass=pymysql.cursors.DictCursor
     )
 
